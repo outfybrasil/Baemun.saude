@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth scroll-pt-20">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAEMUN | Saúde & Autoimunes — Rachel Valente Gomes (CRBM/PR 9916)</title>
+  <meta name="description" content="Acompanhamento biomédico complementar pós-diagnóstico em doenças autoimunes. Patologia Clínica, Fitoterapia e qualidade de vida com Rachel Valente Gomes (CRBM/PR 9916)." />
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cinzel (Títulos e Identidade) & Montserrat (Corpo e UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            baemun: {
+              navy: '#142B47',
+              navyDark: '#0D1D31',
+              navyLight: '#1E3E63',
+              teal: '#1E6B68',
+              tealDark: '#16524F',
+              tealLight: '#E6F2F1',
+              tealSoft: '#F2F8F8',
+              ice: '#F8FAFC'
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            montserrat: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #1F2937;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+    }
+
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.06em;
+    }
+
+    /* Detalhe da Hélice de DNA nas capas/cards brancos (canto inferior direito na diagonal) */
+    .dna-card-watermark {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dna-card-watermark::after {
+      content: "";
+      position: absolute;
+      bottom: -28px;
+      right: -28px;
+      width: 175px;
+      height: 175px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120' fill='none'%3E%3Cg opacity='0.12' stroke='%231E6B68' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M20 10 C 60 10, 60 60, 100 60 C 60 60, 60 110, 20 110'/%3E%3Cpath d='M100 10 C 60 10, 60 60, 20 60 C 60 60, 60 110, 100 110'/%3E%3Cline x1='35' y1='22' x2='85' y2='22' stroke-dasharray='2 3'/%3E%3Cline x1='28' y1='35' x2='92' y2='35'/%3E%3Cline x1='45' y1='48' x2='75' y2='48'/%3E%3Cline x1='45' y1='72' x2='75' y2='72'/%3E%3Cline x1='28' y1='85' x2='92' y2='85'/%3E%3Cline x1='35' y1='98' x2='85' y2='98' stroke-dasharray='2 3'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: rotate(-28deg);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .dna-card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Animação suave para o card do Hero */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .animate-float-slow {
+      animation: floatSlow 7s ease-in-out infinite;
+    }
+
+    /* Custom Scrollbar Clara */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F8FAFC;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E6B68;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="antialiased bg-white text-slate-800 selection:bg-baemun-teal selection:text-white">
+
+  <!-- BARRA SUPERIOR CLARA DE CREDENCIAL ÉTICA (CRBM-6) -->
+  <div class="bg-baemun-tealSoft text-baemun-navy text-xs py-2.5 px-4 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-baemun-teal"></span>
+        <span class="tracking-wider uppercase font-semibold text-baemun-navy">Acompanhamento Biomédico Complementar Pós-Diagnóstico</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <span class="text-slate-600 font-medium tracking-wide">
+          Rachel Valente Gomes · Biomédica · <strong class="text-baemun-teal font-bold">CRBM/PR 9916</strong>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR FIXA (Fundo Branco Limpo, Links em Azul-Marinho e Detalhes em Verde-Petróleo) -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo Oficial BAEMUN (PNG) -->
+      <a href="#inicio" class="flex items-center gap-3.5 group focus:outline-none">
+        <div class="w-12 h-12 rounded-xl bg-white border border-baemun-teal/30 flex items-center justify-center shadow-sm group-hover:border-baemun-teal transition-colors overflow-hidden p-1.5">
+          <img src="logo.png" class="w-full h-full object-contain" alt="Logo Baemun" />
+        </div>
+        <div>
+          <span class="block font-cinzel text-xl sm:text-2xl font-bold text-baemun-navy tracking-[0.18em]">BAEMUN</span>
+          <span class="block text-[10px] uppercase tracking-[0.22em] text-baemun-teal font-semibold -mt-1">Saúde & Autoimunes</span>
+        </div>
+      </a>
+
+      <!-- Links Desktop (Azul-Marinho com Hover Verde-Petróleo) -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-baemun-navy">
+        <a href="#identificacao" class="hover:text-baemun-teal transition-colors">Você se identifica?</a>
+        <a href="#condicoes" class="hover:text-baemun-teal transition-colors">As 5 Condições</a>
+        <a href="#avaliacao" class="hover:text-baemun-teal transition-colors">Como Funciona</a>
+        <a href="#sobre" class="hover:text-baemun-teal transition-colors">Sobre a Rachel</a>
+        <a href="#duvidas" class="hover:text-baemun-teal transition-colors">Dúvidas</a>
+      </nav>
+
+      <!-- CTA Desktop -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#agendamento" class="bg-baemun-teal hover:bg-baemun-navy text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition-all flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+          <span>Agendar Avaliação</span>
+        </a>
+      </div>
+
+      <!-- Botão Menu Mobile -->
+      <button id="mobile-menu-btn" aria-label="Abrir Menu" class="lg:hidden text-baemun-navy p-2 rounded-lg hover:bg-slate-100 focus:outline-none">
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Gaveta Mobile Branca -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-lg">
+      <a href="#identificacao" class="mobile-nav-link block py-2 text-baemun-navy font-medium hover:text-baemun-teal border-b border-slate-100">Você se identifica?</a>
+      <a href="#condicoes" class="mobile-nav-link block py-2 text-baemun-navy font-medium hover:text-baemun-teal border-b border-slate-100">As 5 Condições Acompanhadas</a>
+      <a href="#avaliacao" class="mobile-nav-link block py-2 text-baemun-navy font-medium hover:text-baemun-teal border-b border-slate-100">Como Funciona (4 Etapas)</a>
+      <a href="#sobre" class="mobile-nav-link block py-2 text-baemun-navy font-medium hover:text-baemun-teal border-b border-slate-100">Prazer, sou a Rachel</a>
+      <a href="#duvidas" class="mobile-nav-link block py-2 text-baemun-navy font-medium hover:text-baemun-teal border-b border-slate-100">Dúvidas Frequentes</a>
+      <a href="#agendamento" class="mobile-nav-link block w-full text-center bg-baemun-teal text-white font-semibold py-3 rounded-xl mt-2 shadow-sm">
+        Agendar Avaliação pelo WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION (Fundo Branco Predominante + Hélice de DNA Diagonal em Verde-Petróleo Suave) -->
+  <section id="inicio" class="relative bg-white text-baemun-navy py-16 sm:py-24 lg:py-28 overflow-hidden border-b border-slate-200">
+    <!-- Hélice de DNA no canto inferior direito na diagonal (igual às capas brancas do Canva) -->
+    <div class="absolute right-[-70px] bottom-[-60px] opacity-[0.11] pointer-events-none select-none transform -rotate-12">
+      <svg class="w-[420px] h-[420px] sm:w-[560px] sm:h-[560px]" viewBox="0 0 200 200" fill="none">
+        <path d="M30 10 C 100 10, 100 100, 170 100 C 100 100, 100 190, 30 190" stroke="#1E6B68" stroke-width="3.2"/>
+        <path d="M170 10 C 100 10, 100 100, 30 100 C 100 100, 100 190, 170 190" stroke="#142B47" stroke-width="3.2"/>
+        <line x1="50" y1="30" x2="150" y2="30" stroke="#1E6B68" stroke-width="2" stroke-dasharray="4 4"/>
+        <line x1="45" y1="55" x2="155" y2="55" stroke="#1E6B68" stroke-width="2"/>
+        <line x1="70" y1="80" x2="130" y2="80" stroke="#1E6B68" stroke-width="2"/>
+        <line x1="70" y1="120" x2="130" y2="120" stroke="#1E6B68" stroke-width="2"/>
+        <line x1="45" y1="145" x2="155" y2="145" stroke="#1E6B68" stroke-width="2"/>
+        <line x1="50" y1="170" x2="150" y2="170" stroke="#1E6B68" stroke-width="2" stroke-dasharray="4 4"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Coluna de Texto Principal (Fundo Branco, Títulos em Azul-Marinho) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-baemun-tealLight border border-baemun-teal/30 text-baemun-teal text-xs font-bold tracking-wider uppercase">
+            <span>Biomedicina Integrada ao Pós-Diagnóstico</span>
+          </div>
+
+          <h1 class="font-cinzel text-2xl sm:text-4xl lg:text-[42px] font-bold leading-tight tracking-wide text-baemun-navy">
+            VOCÊ NÃO PRECISA ATRAVESSAR O PÓS-DIAGNÓSTICO DE UMA DOENÇA AUTOIMUNE SOZINHA
+          </h1>
+
+          <!-- Linha Verde-Petróleo assinatura da marca -->
+          <div class="w-24 h-1 bg-baemun-teal rounded-full"></div>
+
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed font-normal max-w-2xl">
+            Sair do consultório médico com um diagnóstico autoimune na mão e dezenas de dúvidas sobre rotina, cansaço e exames é mais comum do que parece. Na <strong class="text-baemun-navy font-semibold">Baemun</strong>, fazemos o <strong class="text-baemun-teal font-semibold">acompanhamento biomédico complementar</strong> em sintonia com o tratamento do seu médico.
+          </p>
+
+          <!-- Botões Principais -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <a href="#agendamento" class="bg-baemun-teal hover:bg-baemun-navy text-white font-semibold px-7 py-4 rounded-xl shadow-md transition-all text-center flex items-center justify-center gap-3">
+              <span>Agendar Minha Avaliação</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#condicoes" class="bg-baemun-ice hover:bg-baemun-tealLight text-baemun-navy font-semibold px-7 py-4 rounded-xl border border-slate-300 transition-all text-center">
+              Conhecer as 5 Condições
+            </a>
+          </div>
+
+          <!-- Mini Selos de Confiança em Fundo Claro -->
+          <div class="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-slate-200 text-xs sm:text-sm text-slate-700 font-medium">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-baemun-tealLight border border-baemun-teal/30 flex items-center justify-center text-baemun-teal font-bold shrink-0">✓</span>
+              <span>Patologia Clínica & Leitura de Exames</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-baemun-tealLight border border-baemun-teal/30 flex items-center justify-center text-baemun-teal font-bold shrink-0">✓</span>
+              <span>Fitoterapia & Hábitos de Rotina</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-baemun-tealLight border border-baemun-teal/30 flex items-center justify-center text-baemun-teal font-bold shrink-0">✓</span>
+              <span>Vivência Real: Celíaca & Hashimoto</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Card Institucional Branco com a Logo Oficial Baemun -->
+        <div class="lg:col-span-5">
+          <div class="bg-white text-slate-800 rounded-2xl p-7 sm:p-8 shadow-xl border-2 border-baemun-teal/20 dna-card-watermark animate-float-slow">
+            <div class="dna-card-content space-y-5">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                <div>
+                  <span class="text-[11px] font-bold uppercase tracking-widest text-baemun-teal block">Cuidado Ético e Integrado</span>
+                  <h2 class="font-cinzel text-lg sm:text-xl font-bold text-baemun-navy mt-0.5">O QUE FAZEMOS NA BAEMUN</h2>
+                </div>
+                <!-- Logo Oficial da Baemun (PNG) -->
+                <div class="w-12 h-12 rounded-xl bg-white border border-baemun-teal/30 flex items-center justify-center p-1.5 shrink-0 overflow-hidden shadow-sm">
+                  <img src="logo.png" class="w-full h-full object-contain" alt="Logo Baemun" />
+                </div>
+              </div>
+
+              <ul class="space-y-3.5 text-sm text-slate-700">
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 w-5 h-5 rounded-full bg-baemun-teal text-white text-xs flex items-center justify-center shrink-0 font-bold">1</span>
+                  <div>
+                    <strong class="text-baemun-navy block">Leitura Evolutiva de Marcadores</strong>
+                    Acompanhamos seus exames laboratoriais ao longo do tempo para observar tendências inflamatórias e metabólicas.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 w-5 h-5 rounded-full bg-baemun-teal text-white text-xs flex items-center justify-center shrink-0 font-bold">2</span>
+                  <div>
+                    <strong class="text-baemun-navy block">Fitoterapia e Promoção da Saúde</strong>
+                    Estratégias naturais dentro da habilitação biomédica, higiene do sono e organização da rotina pós-diagnóstico.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 w-5 h-5 rounded-full bg-baemun-teal text-white text-xs flex items-center justify-center shrink-0 font-bold">3</span>
+                  <div>
+                    <strong class="text-baemun-navy block">Diálogo com o seu Médico</strong>
+                    Não substituímos a consulta médica: organizamos seu histórico e encaminhamos ao médico sempre que houver alterações.
+                  </div>
+                </li>
+              </ul>
+
+              <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
+                <span class="font-semibold text-baemun-navy">Rachel Valente Gomes</span>
+                <span class="bg-baemun-tealLight text-baemun-teal font-bold px-2.5 py-1 rounded">CRBM/PR 9916</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEÇÃO INTERATIVA DE IDENTIFICAÇÃO ("Quantas dessas frases você já ouviu?") -->
+  <section id="identificacao" class="py-16 sm:py-24 bg-baemun-ice border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-baemun-teal">Acolhimento & Identificação</span>
+        <h2 class="font-cinzel text-2xl sm:text-4xl font-bold text-baemun-navy">
+          QUANTAS DESSAS FRASES VOCÊ JÁ OUVIU?
+        </h2>
+        <div class="w-16 h-1 bg-baemun-teal mx-auto rounded-full"></div>
+        <p class="text-slate-600 text-sm sm:text-base pt-2">
+          Quem convive com uma condição autoimune muitas vezes enfrenta a dor invisível de não ser compreendida. <strong>Toque nas frases abaixo</strong> que já disseram para você:
+        </p>
+      </div>
+
+      <!-- Grid Interativo das 6 Frases (Cards Brancos) -->
+      <div id="phrases-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-10">
+        <!-- Card 1 -->
+        <button type="button" data-phrase="1" class="phrase-card flex flex-col h-full text-left bg-white p-6 rounded-2xl border-2 border-slate-200 hover:border-baemun-teal transition-all shadow-sm hover:shadow-md dna-card-watermark group focus:outline-none">
+          <div class="dna-card-content flex flex-col justify-between h-full w-full">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-baemun-teal phrase-tag">Toque se já ouviu</span>
+                <span class="phrase-check w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center text-xs font-bold text-transparent transition-colors shrink-0">✓</span>
+              </div>
+              <p class="font-cinzel text-base sm:text-lg font-bold text-baemun-navy leading-snug">
+                “É SÓ ESTRESSE, VOCÊ PRECISA RELAXAR UM POUCO.”
+              </p>
+            </div>
+            <p class="text-xs text-slate-500 pt-4 mt-auto">
+              Quando o cansaço extremo que não melhora nem dormindo é tratado como preguiça ou rotina corrida.
+            </p>
+          </div>
+        </button>
+
+        <!-- Card 2 -->
+        <button type="button" data-phrase="2" class="phrase-card flex flex-col h-full text-left bg-white p-6 rounded-2xl border-2 border-slate-200 hover:border-baemun-teal transition-all shadow-sm hover:shadow-md dna-card-watermark group focus:outline-none">
+          <div class="dna-card-content flex flex-col justify-between h-full w-full">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-baemun-teal phrase-tag">Toque se já ouviu</span>
+                <span class="phrase-check w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center text-xs font-bold text-transparent transition-colors shrink-0">✓</span>
+              </div>
+              <p class="font-cinzel text-base sm:text-lg font-bold text-baemun-navy leading-snug">
+                “MAS VOCÊ NÃO PARECE DOENTE POR FORA.”
+              </p>
+            </div>
+            <p class="text-xs text-slate-500 pt-4 mt-auto">
+              Porque a inflamação autoimune, a névoa mental e os sintomas articulares ou intestinais não aparecem no espelho.
+            </p>
+          </div>
+        </button>
+
+        <!-- Card 3 -->
+        <button type="button" data-phrase="3" class="phrase-card flex flex-col h-full text-left bg-white p-6 rounded-2xl border-2 border-slate-200 hover:border-baemun-teal transition-all shadow-sm hover:shadow-md dna-card-watermark group focus:outline-none">
+          <div class="dna-card-content flex flex-col justify-between h-full w-full">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-baemun-teal phrase-tag">Toque se já ouviu</span>
+                <span class="phrase-check w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center text-xs font-bold text-transparent transition-colors shrink-0">✓</span>
+              </div>
+              <p class="font-cinzel text-base sm:text-lg font-bold text-baemun-navy leading-snug">
+                “SEUS EXAMES ESTÃO NORMAIS, NÃO É NADA.”
+              </p>
+            </div>
+            <p class="text-xs text-slate-500 pt-4 mt-auto">
+              Quando olham apenas um número isolado na folha, sem acompanhar a curva evolutiva dos seus marcadores.
+            </p>
+          </div>
+        </button>
+
+        <!-- Card 4 -->
+        <button type="button" data-phrase="4" class="phrase-card flex flex-col h-full text-left bg-white p-6 rounded-2xl border-2 border-slate-200 hover:border-baemun-teal transition-all shadow-sm hover:shadow-md dna-card-watermark group focus:outline-none">
+          <div class="dna-card-content flex flex-col justify-between h-full w-full">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-baemun-teal phrase-tag">Toque se já ouviu</span>
+                <span class="phrase-check w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center text-xs font-bold text-transparent transition-colors shrink-0">✓</span>
+              </div>
+              <p class="font-cinzel text-base sm:text-lg font-bold text-baemun-navy leading-snug">
+                “ISSO É COISA DA SUA CABEÇA.”
+              </p>
+            </div>
+            <p class="text-xs text-slate-500 pt-4 mt-auto">
+              A invalidação constante de queixas reais que merecem escuta técnica, acolhimento e organização.
+            </p>
+          </div>
+        </button>
+
+        <!-- Card 5 -->
+        <button type="button" data-phrase="5" class="phrase-card flex flex-col h-full text-left bg-white p-6 rounded-2xl border-2 border-slate-200 hover:border-baemun-teal transition-all shadow-sm hover:shadow-md dna-card-watermark group focus:outline-none">
+          <div class="dna-card-content flex flex-col justify-between h-full w-full">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-baemun-teal phrase-tag">Toque se já ouviu</span>
+                <span class="phrase-check w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center text-xs font-bold text-transparent transition-colors shrink-0">✓</span>
+              </div>
+              <p class="font-cinzel text-base sm:text-lg font-bold text-baemun-navy leading-snug">
+                “MAS VOCÊ JÁ TOMOU VITAMINA C?”
+              </p>
+            </div>
+            <p class="text-xs text-slate-500 pt-4 mt-auto">
+              Quando você relata sintomas sérios de doença celíaca ou autoimune e recebe palpites caseiros sem base científica.
+            </p>
+          </div>
+        </button>
+
+        <!-- Card 6 -->
+        <button type="button" data-phrase="6" class="phrase-card flex flex-col h-full text-left bg-white p-6 rounded-2xl border-2 border-slate-200 hover:border-baemun-teal transition-all shadow-sm hover:shadow-md dna-card-watermark group focus:outline-none">
+          <div class="dna-card-content flex flex-col justify-between h-full w-full">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-baemun-teal phrase-tag">Toque se já ouviu</span>
+                <span class="phrase-check w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center text-xs font-bold text-transparent transition-colors shrink-0">✓</span>
+              </div>
+              <p class="font-cinzel text-base sm:text-lg font-bold text-baemun-navy leading-snug">
+                “É SÓ CORTAR O GLÚTEN POR CONTA PRÓPRIA ANTES DOS EXAMES.”
+              </p>
+            </div>
+            <p class="text-xs text-slate-500 pt-4 mt-auto">
+              Um erro perigoso: retirar o glúten antes de concluir a investigação médica pode mascarar os exames laboratoriais.
+            </p>
+          </div>
+        </button>
+      </div>
+
+      <!-- Painel de Resposta Dinâmica (Invertido para Fundo Claro e Suave) -->
+      <div id="identification-feedback" class="mt-8 bg-white text-baemun-navy rounded-2xl p-6 sm:p-8 shadow-md border border-baemun-teal/30 border-l-8 border-l-baemun-teal transition-all">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="space-y-2">
+            <div class="inline-flex items-center gap-2 text-baemun-teal text-xs font-bold uppercase tracking-wider">
+              <span id="selected-count-badge">Selecione acima as frases que já ouviu</span>
+            </div>
+            <h3 id="feedback-title" class="font-cinzel text-lg sm:text-xl font-bold text-baemun-navy">
+              SEUS SINTOMAS SÃO REAIS E MERECEM UM OLHAR TÉCNICO INTEGRADO
+            </h3>
+            <p id="feedback-text" class="text-slate-600 text-sm leading-relaxed max-w-3xl">
+              Na Baemun, você não recebe palpites prontos. Nós organizamos seus exames laboratoriais, avaliamos a evolução dos marcadores e estruturamos hábitos e fitoterapia para apoiar o seu dia a dia pós-diagnóstico.
+            </p>
+          </div>
+          <a href="#agendamento" class="shrink-0 bg-baemun-teal hover:bg-baemun-navy text-white font-semibold text-sm px-6 py-3.5 rounded-xl shadow-sm transition-all">
+            Quero Ser Escutada
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. AS 5 CONDIÇÕES QUE ACOMPANHAMOS NA BAEMUN (Fundo Branco Limpo) -->
+  <section id="condicoes" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-baemun-teal">Foco de Atuação Biomédica</span>
+        <h2 class="font-cinzel text-2xl sm:text-4xl font-bold text-baemun-navy">
+          AS 5 CONDIÇÕES QUE ACOMPANHAMOS NA BAEMUN
+        </h2>
+        <div class="w-16 h-1 bg-baemun-teal mx-auto rounded-full"></div>
+        <p class="text-slate-600 text-sm sm:text-base pt-2">
+          Acompanhamento biomédico complementar focado na leitura evolutiva de exames, controle de hábitos pró-inflamatórios e qualidade de vida em conjunto com o tratamento médico.
+        </p>
+      </div>
+
+      <!-- Abas Seletoras das 5 Condições -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-10" id="condition-tabs">
+        <button type="button" data-cond="hashimoto" class="cond-tab active-tab px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all bg-baemun-teal text-white shadow-sm">
+          1. Tireoidite de Hashimoto
+        </button>
+        <button type="button" data-cond="celiaca" class="cond-tab px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all bg-baemun-tealSoft text-baemun-navy border border-slate-200 hover:border-baemun-teal">
+          2. Doença Celíaca
+        </button>
+        <button type="button" data-cond="retocolite" class="cond-tab px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all bg-baemun-tealSoft text-baemun-navy border border-slate-200 hover:border-baemun-teal">
+          3. Retocolite Ulcerativa
+        </button>
+        <button type="button" data-cond="crohn" class="cond-tab px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all bg-baemun-tealSoft text-baemun-navy border border-slate-200 hover:border-baemun-teal">
+          4. Doença de Crohn
+        </button>
+        <button type="button" data-cond="artrite" class="cond-tab px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all bg-baemun-tealSoft text-baemun-navy border border-slate-200 hover:border-baemun-teal">
+          5. Artrite Reumatoide
+        </button>
+      </div>
+
+      <!-- Painel Detalhado da Condição Selecionada (Branco com Hélice DNA) -->
+      <div class="mt-8">
+        <div id="condition-detail-card" class="bg-white rounded-2xl p-6 sm:p-10 border-2 border-slate-200 shadow-md dna-card-watermark">
+          <div class="dna-card-content grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+              <div class="space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-baemun-tealLight text-baemun-teal text-xs font-bold uppercase tracking-wider" id="cond-badge">
+                  1 · Autoimune da Tireoide
+                </div>
+                <h3 id="cond-title" class="font-cinzel text-2xl sm:text-3xl font-bold text-baemun-navy">
+                  TIREOIDITE DE HASHIMOTO
+                </h3>
+                <p id="cond-desc" class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  É a causa mais comum de hipotireoidismo. Mesmo com o hormônio ajustado pelo médico, muitas pacientes continuam sentindo cansaço intenso, queda de cabelo, pele seca e dificuldade de concentração no pós-diagnóstico.
+                </p>
+              </div>
+
+              <div class="bg-baemun-tealSoft p-4 rounded-xl border border-baemun-teal/20 space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-baemun-teal block">Alerta Educativo Baemun:</span>
+                <p id="cond-tip" class="text-xs sm:text-sm text-slate-700 font-medium">
+                  Acompanhar apenas o TSH isolado nem sempre conta a história toda. Avaliamos a evolução de anticorpos, ferritina, vitaminas e a qualidade do seu sono em diálogo com o seu endocrinologista.
+                </p>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-baemun-ice rounded-xl p-6 border border-slate-200 flex flex-col justify-between space-y-4">
+              <div class="space-y-4">
+                <h4 class="font-cinzel text-sm font-bold text-baemun-navy uppercase tracking-wider border-b border-slate-200 pb-2">
+                  Como o Acompanhamento Atua:
+                </h4>
+                <ul id="cond-bullets" class="space-y-3 text-xs sm:text-sm text-slate-700">
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-baemun-teal font-bold">●</span>
+                    <span>Organização cronológica de TSH, T4 Livre, T3 e anticorpos (Anti-TPO e Anti-Tireoglobulina).</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-baemun-teal font-bold">●</span>
+                    <span>Monitoramento de marcadores frequentemente associados (ferritina, B12, vitamina D).</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-baemun-teal font-bold">●</span>
+                    <span>Estratégias de higiene do sono, manejo do estresse e fitoterapia complementar.</span>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" id="cond-select-cta" data-select-cond="Tireoidite de Hashimoto" class="w-full mt-2 bg-baemun-teal hover:bg-baemun-navy text-white font-semibold text-xs sm:text-sm py-3 px-4 rounded-xl transition-colors shadow-sm">
+                Agendar Acompanhamento para Hashimoto →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quadro Educativo Rápido (Invertido para Branco & Verde-Suave com Hélice DNA) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10">
+        <div class="bg-white text-baemun-navy rounded-2xl p-6 sm:p-8 border-2 border-slate-200 shadow-sm dna-card-watermark flex flex-col justify-between">
+          <div class="dna-card-content flex flex-col justify-between h-full">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-baemun-teal">Resumo Comparativo</span>
+              <h3 class="font-cinzel text-xl font-bold mt-1 text-baemun-navy">RETOCOLITE ULCERATIVA X DOENÇA DE CROHN</h3>
+              <div class="w-12 h-0.5 bg-baemun-teal my-3"></div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Ambas são Doenças Inflamatórias Intestinais (DII) com sintomas parecidos, mas comportamentos diferentes:
+              </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs mt-auto">
+              <div class="bg-baemun-tealSoft p-4 rounded-xl border border-baemun-teal/20 text-slate-700 h-full">
+                <strong class="text-baemun-teal font-cinzel text-sm block mb-1">RETOCOLITE</strong>
+                Afeta exclusivamente a camada mais superficial (mucosa) do intestino grosso (cólon e reto), de forma contínua.
+              </div>
+              <div class="bg-baemun-tealSoft p-4 rounded-xl border border-baemun-teal/20 text-slate-700 h-full">
+                <strong class="text-baemun-teal font-cinzel text-sm block mb-1">CROHN</strong>
+                Pode afetar qualquer parte do trato gastrointestinal (da boca ao ânus), em áreas alternadas e camadas profundas.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-baemun-tealSoft rounded-2xl p-6 sm:p-8 border border-baemun-teal/25 flex flex-col justify-between dna-card-watermark">
+          <div class="dna-card-content">
+            <span class="text-xs font-bold uppercase tracking-widest text-baemun-teal">Visão Integrada</span>
+            <h3 class="font-cinzel text-xl font-bold text-baemun-navy mt-1">EM COMUM ENTRE AS 5 CONDIÇÕES...</h3>
+            <div class="w-12 h-0.5 bg-baemun-teal my-3"></div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              Em todas as 5 condições, o sistema imunológico reage de forma crônica e exige leitura atenta de sinais laboratoriais e de rotina. Quem tem uma condição autoimune (como Doença Celíaca) também precisa ficar atenta a outros marcadores, como os da tireoide (Hashimoto).
+            </p>
+          </div>
+          <div class="dna-card-content mt-4 pt-4 border-t border-baemun-teal/20 flex items-center justify-between text-xs text-baemun-navy font-semibold">
+            <span>Não tire o glúten antes de concluir seus exames com o médico.</span>
+            <a href="#avaliacao" class="text-baemun-teal underline hover:text-baemun-navy">Ver etapas →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. COMO É UMA AVALIAÇÃO NA BAEMUN? (4 ETAPAS EM CARDS BRANCOS) -->
+  <section id="avaliacao" class="py-16 sm:py-24 bg-baemun-ice border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-baemun-teal">Jornada da Paciente</span>
+        <h2 class="font-cinzel text-2xl sm:text-4xl font-bold text-baemun-navy">
+          COMO É UMA AVALIAÇÃO NA BAEMUN?
+        </h2>
+        <div class="w-16 h-1 bg-baemun-teal mx-auto rounded-full"></div>
+        <p class="text-slate-600 text-sm sm:text-base pt-2">
+          Um processo organizado em 4 etapas claras para que você compreenda seus exames e saiba exatamente como cuidar da sua rotina pós-diagnóstico.
+        </p>
+      </div>
+
+      <!-- 4 Cards Brancos das Etapas (1 a 4) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        <!-- Etapa 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm dna-card-watermark flex flex-col justify-between">
+          <div class="dna-card-content space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-baemun-tealLight text-baemun-teal font-cinzel text-[11px] font-bold whitespace-nowrap">ETAPA 1 · ANTES</span>
+              <span class="text-baemun-teal font-bold text-lg shrink-0">01</span>
+            </div>
+            <h3 class="font-cinzel text-lg font-bold text-baemun-navy pt-1">
+              PREPARAÇÃO E HISTÓRICO
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Um bom atendimento começa antes de você chegar. Você envia seus exames anteriores, laudos médicos e preenche um pré-histórico das suas queixas atuais.
+            </p>
+          </div>
+          <div class="dna-card-content pt-4 mt-4 border-t border-slate-100 text-[11px] font-semibold text-baemun-teal">
+            ✓ Organização prévia sem pressa
+          </div>
+        </div>
+
+        <!-- Etapa 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm dna-card-watermark flex flex-col justify-between">
+          <div class="dna-card-content space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-baemun-tealLight text-baemun-teal font-cinzel text-[11px] font-bold whitespace-nowrap">ETAPA 2 · ATENDIMENTO</span>
+              <span class="text-baemun-teal font-bold text-lg shrink-0">02</span>
+            </div>
+            <h3 class="font-cinzel text-lg font-bold text-baemun-navy pt-1">
+              ESCUTA ACOLHEDORA
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Mapeamos sua rotina real: níveis de energia ao longo do dia, qualidade do sono, funcionamento intestinal, rigidez matinal e histórico pós-diagnóstico.
+            </p>
+          </div>
+          <div class="dna-card-content pt-4 mt-4 border-t border-slate-100 text-[11px] font-semibold text-baemun-teal">
+            ✓ Atendimento Online ou Presencial
+          </div>
+        </div>
+
+        <!-- Etapa 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm dna-card-watermark flex flex-col justify-between">
+          <div class="dna-card-content space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-baemun-tealLight text-baemun-teal font-cinzel text-[11px] font-bold whitespace-nowrap">ETAPA 3 · EXAMES</span>
+              <span class="text-baemun-teal font-bold text-lg shrink-0">03</span>
+            </div>
+            <h3 class="font-cinzel text-lg font-bold text-baemun-navy pt-1">
+              LEITURA EVOLUTIVA
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Com base na Patologia Clínica, analisamos a curva de evolução dos seus marcadores laboratoriais de forma didática, explicando o que cada resultado representa.
+            </p>
+          </div>
+          <div class="dna-card-content pt-4 mt-4 border-t border-slate-100 text-[11px] font-semibold text-baemun-teal">
+            ✓ Visão integrada ao tratamento médico
+          </div>
+        </div>
+
+        <!-- Etapa 4 -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-baemun-teal/30 shadow-sm dna-card-watermark flex flex-col justify-between">
+          <div class="dna-card-content space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-baemun-teal text-white font-cinzel text-[11px] font-bold whitespace-nowrap">ETAPA 4 · DEPOIS</span>
+              <span class="text-baemun-teal font-bold text-lg shrink-0">04</span>
+            </div>
+            <h3 class="font-cinzel text-lg font-bold text-baemun-navy pt-1">
+              PLANO COMPLEMENTAR
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Entrega do seu plano de acompanhamento biomédico com orientações de hábitos saudáveis, higiene do sono, Fitoterapia e relatórios para o seu médico.
+            </p>
+          </div>
+          <div class="dna-card-content pt-4 mt-4 border-t border-slate-100 text-[11px] font-semibold text-baemun-teal">
+            ✓ Suporte contínuo na evolução
+          </div>
+        </div>
+      </div>
+
+      <!-- Checklist Interativo em Card Branco -->
+      <div class="mt-12 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-5">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-baemun-teal">Checklist Prático da Paciente</span>
+            <h3 class="font-cinzel text-lg sm:text-2xl font-bold text-baemun-navy mt-0.5">
+              VAI FAZER SUA PRIMEIRA AVALIAÇÃO? VEJA O QUE SEPARAR
+            </h3>
+          </div>
+          <span id="checklist-progress" class="text-xs font-bold bg-baemun-tealLight text-baemun-teal px-3.5 py-2 rounded-lg self-start md:self-auto shrink-0">
+            0 de 4 itens marcados
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+          <label class="flex items-start gap-3 p-4 rounded-xl bg-baemun-ice border border-slate-200 cursor-pointer hover:border-baemun-teal transition-colors">
+            <input type="checkbox" class="prep-check mt-1 w-4 h-4 shrink-0 accent-baemun-teal rounded" />
+            <span class="text-xs sm:text-sm text-slate-700">
+              <strong class="text-baemun-navy block">1. Exames laboratoriais dos últimos 12 meses</strong>
+              Para compararmos a evolução histórica dos seus marcadores e não apenas o último resultado isolado.
+            </span>
+          </label>
+          <label class="flex items-start gap-3 p-4 rounded-xl bg-baemun-ice border border-slate-200 cursor-pointer hover:border-baemun-teal transition-colors">
+            <input type="checkbox" class="prep-check mt-1 w-4 h-4 shrink-0 accent-baemun-teal rounded" />
+            <span class="text-xs sm:text-sm text-slate-700">
+              <strong class="text-baemun-navy block">2. Receitas e prescrições médicas em uso</strong>
+              Fundamental para que o acompanhamento complementar e a fitoterapia respeitem integralmente o tratamento do seu médico.
+            </span>
+          </label>
+          <label class="flex items-start gap-3 p-4 rounded-xl bg-baemun-ice border border-slate-200 cursor-pointer hover:border-baemun-teal transition-colors">
+            <input type="checkbox" class="prep-check mt-1 w-4 h-4 shrink-0 accent-baemun-teal rounded" />
+            <span class="text-xs sm:text-sm text-slate-700">
+              <strong class="text-baemun-navy block">3. Anotações sobre seus principais sintomas</strong>
+              Horários em que o cansaço piora, qualidade do sono, desconfortos digestivos ou rigidez ao acordar.
+            </span>
+          </label>
+          <label class="flex items-start gap-3 p-4 rounded-xl bg-baemun-ice border border-slate-200 cursor-pointer hover:border-baemun-teal transition-colors">
+            <input type="checkbox" class="prep-check mt-1 w-4 h-4 shrink-0 accent-baemun-teal rounded" />
+            <span class="text-xs sm:text-sm text-slate-700">
+              <strong class="text-baemun-navy block">4. Suas dúvidas reais do dia a dia</strong>
+              Aqueles detalhes sobre rotina e exames que muitas vezes você esquece de perguntar ou não dá tempo nas consultas rápidas.
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SOBRE A RACHEL ("Prazer, eu sou a Rachel" — Em Layout Claro com a Logo Oficial Baemun) -->
+  <section id="sobre" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Card Visual Claro de Identidade da Profissional com a Logo Baemun -->
+        <div class="lg:col-span-5">
+          <div class="bg-baemun-tealSoft text-baemun-navy rounded-3xl p-8 sm:p-10 shadow-lg relative overflow-hidden border-2 border-baemun-teal/25 border-b-8 border-b-baemun-teal dna-card-watermark">
+            <div class="dna-card-content space-y-6">
+              <!-- Logo Oficial Baemun em destaque -->
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 rounded-2xl bg-white border border-baemun-teal/30 flex items-center justify-center shadow-sm p-2 overflow-hidden">
+                  <img src="logo.png" class="w-full h-full object-contain" alt="Logo Baemun" />
+                </div>
+                <div>
+                  <span class="font-cinzel text-xl font-bold text-baemun-navy tracking-[0.18em] block">BAEMUN</span>
+                  <span class="text-[11px] uppercase tracking-widest text-baemun-teal font-semibold">Saúde & Autoimunes</span>
+                </div>
+              </div>
+
+              <div>
+                <span class="text-xs uppercase tracking-[0.2em] text-baemun-teal font-bold block">Fundadora & Responsável Técnica</span>
+                <h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-baemun-navy mt-1">
+                  RACHEL VALENTE GOMES
+                </h3>
+                <p class="text-sm text-slate-600 mt-1 font-semibold">
+                  Biomédica · <span class="text-baemun-teal font-bold">CRBM/PR 9916</span>
+                </p>
+              </div>
+
+              <div class="w-16 h-0.5 bg-baemun-teal"></div>
+
+              <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+                  <strong class="text-baemun-teal block">Habilitações Registradas:</strong>
+                  Patologia Clínica (Análises Clínicas) & Fitoterapia
+                </div>
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+                  <strong class="text-baemun-teal block">Vivência Pessoal com Autoimunes:</strong>
+                  Paciente com Doença Celíaca e Tireoidite de Hashimoto
+                </div>
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+                  <strong class="text-baemun-teal block">Atuação Respaldada:</strong>
+                  Acompanhamento Biomédico Complementar alinhado às diretrizes éticas do CRBM-6.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- História Real -->
+        <div class="lg:col-span-7 space-y-5">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-baemun-teal">A História por Trás da Marca</span>
+          <h2 class="font-cinzel text-2xl sm:text-4xl font-bold text-baemun-navy">
+            “PRAZER, EU SOU A RACHEL — E EU SEI NA PELE COMO É RECEBER ESSE DIAGNÓSTICO”
+          </h2>
+          <div class="w-16 h-1 bg-baemun-teal rounded-full"></div>
+
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            A <strong>Baemun</strong> não nasceu apenas dos livros de Biomedicina ou da bancada de análises clínicas. Ela nasceu porque <strong>eu mesma convivo com a Doença Celíaca e com a Tireoidite de Hashimoto</strong>.
+          </p>
+
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Eu conheço exatamente a sensação de sair do consultório com um diagnóstico autoimune, olhar para uma pilha de exames laboratoriais e pensar: <em>“E agora? Como eu organizo minha rotina, meu cansaço e meus hábitos no dia a dia?”</em>.
+          </p>
+
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Como <strong>Biomédica (CRBM/PR 9916)</strong> habilitada em <strong>Patologia Clínica e Fitoterapia</strong>, estruturei a Baemun (inclusive com parecer técnico consultado junto ao Conselho Regional de Biomedicina) para oferecer justamente a ponte que faltava: um <strong>acompanhamento biomédico complementar</strong> que caminha lado a lado com o tratamento do seu médico, traduzindo seus exames e ajustando sua rotina com ciência e acolhimento.
+          </p>
+
+          <div class="pt-3 flex flex-wrap items-center gap-4">
+            <a href="#agendamento" class="bg-baemun-teal hover:bg-baemun-navy text-white font-semibold text-sm px-6 py-3.5 rounded-xl transition-colors shadow-sm">
+              Conversar com a Rachel pelo WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. AGENDAMENTO INTELIGENTE VIA WHATSAPP (Fundo Gelo Suave + Card Branco) -->
+  <section id="agendamento" class="py-16 sm:py-24 bg-baemun-ice text-baemun-navy relative overflow-hidden border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-baemun-teal">Atendimento Personalizado</span>
+        <h2 class="font-cinzel text-2xl sm:text-4xl font-bold text-baemun-navy">
+          PRONTA PARA DAR O PRÓXIMO PASSO?
+        </h2>
+        <div class="w-16 h-1 bg-baemun-teal mx-auto rounded-full"></div>
+        <p class="text-slate-600 text-sm sm:text-base pt-2">
+          Personalize abaixo o motivo do seu contato para enviarmos uma mensagem estruturada diretamente para o WhatsApp de atendimento da <strong>Baemun</strong>.
+        </p>
+      </div>
+
+      <div class="mt-10 bg-white text-slate-800 rounded-3xl p-6 sm:p-10 shadow-lg border-2 border-baemun-teal/20 dna-card-watermark">
+        <div class="dna-card-content grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Controles de Personalização -->
+          <div class="lg:col-span-7 flex flex-col justify-between space-y-5">
+            <div>
+              <label for="patient-name" class="block text-xs font-bold uppercase tracking-wider text-baemun-navy mb-2">
+                1. Seu Nome (Opcional)
+              </label>
+              <input type="text" id="patient-name" placeholder="Ex.: Mariana Silva" class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-baemun-ice focus:bg-white focus:border-baemun-teal focus:outline-none text-sm transition-colors" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="patient-condition" class="block text-xs font-bold uppercase tracking-wider text-baemun-navy mb-2">
+                  2. Condição Principal
+                </label>
+                <select id="patient-condition" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-baemun-teal focus:outline-none text-sm bg-baemun-ice focus:bg-white transition-colors">
+                  <option value="Tireoidite de Hashimoto">Tireoidite de Hashimoto</option>
+                  <option value="Doença Celíaca">Doença Celíaca</option>
+                  <option value="Retocolite Ulcerativa">Retocolite Ulcerativa</option>
+                  <option value="Doença de Crohn">Doença de Crohn</option>
+                  <option value="Artrite Reumatoide">Artrite Reumatoide</option>
+                  <option value="Mais de uma condição autoimune">Mais de uma condição autoimune</option>
+                  <option value="Em acompanhamento médico inicial">Outra / Em investigação com meu médico</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="patient-modality" class="block text-xs font-bold uppercase tracking-wider text-baemun-navy mb-2">
+                  3. Formato Preferido
+                </label>
+                <select id="patient-modality" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-baemun-teal focus:outline-none text-sm bg-baemun-ice focus:bg-white transition-colors">
+                  <option value="Online (Teleatendimento)">Atendimento Online</option>
+                  <option value="Presencial">Atendimento Presencial</option>
+                  <option value="Quero entender as opções">Quero entender as opções</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="patient-goal" class="block text-xs font-bold uppercase tracking-wider text-baemun-navy mb-2">
+                4. O que você mais busca neste momento?
+              </label>
+              <select id="patient-goal" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-baemun-teal focus:outline-none text-sm bg-baemun-ice focus:bg-white transition-colors">
+                <option value="acompanhar a evolução dos meus exames laboratoriais e marcadores">Entender e acompanhar a evolução dos meus exames</option>
+                <option value="organizar minha rotina pós-diagnóstico (cansaço, sono e hábitos)">Organizar minha rotina pós-diagnóstico (cansaço e sono)</option>
+                <option value="conhecer o suporte com Fitoterapia integrada ao meu tratamento médico">Suporte com Fitoterapia integrada ao tratamento médico</option>
+                <option value="saber valores e horários disponíveis para a primeira avaliação">Saber valores e horários para a primeira avaliação</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Preview da Mensagem e Botões -->
+          <div class="lg:col-span-5 bg-baemun-ice rounded-2xl p-6 border border-slate-200 flex flex-col justify-between space-y-4 shadow-sm">
+            <div class="space-y-2 flex-1 flex flex-col">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-baemun-teal block">Prévia da sua mensagem:</span>
+              <div id="whatsapp-preview" class="bg-white p-4 rounded-xl border border-baemun-teal/20 text-xs sm:text-sm text-slate-700 leading-relaxed italic flex-1 flex items-center">
+                <!-- Preenchido via JS -->
+              </div>
+            </div>
+
+            <div class="space-y-2.5">
+              <a id="whatsapp-send-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full bg-baemun-teal hover:bg-baemun-navy text-white font-semibold text-sm py-3.5 px-5 rounded-xl shadow-sm transition-all flex items-center justify-center gap-2">
+                <span>Enviar Mensagem no WhatsApp</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+
+              <button type="button" id="copy-msg-btn" class="w-full bg-white hover:bg-slate-50 text-baemun-navy font-semibold text-xs py-2.5 px-4 rounded-xl border border-slate-300 transition-colors">
+                Copiar Texto da Mensagem
+              </button>
+              <p id="copy-feedback" class="text-center text-xs font-semibold text-baemun-teal hidden">
+                ✓ Mensagem copiada para a área de transferência!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. DÚVIDAS FREQUENTES ("Você perguntou, a Baemun responde" — FAQ em Fundo Branco) -->
+  <section id="duvidas" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-3">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-baemun-teal">Você Perguntou, a Baemun Responde</span>
+        <h2 class="font-cinzel text-2xl sm:text-4xl font-bold text-baemun-navy">
+          DÚVIDAS FREQUENTES
+        </h2>
+        <div class="w-16 h-1 bg-baemun-teal mx-auto rounded-full"></div>
+      </div>
+
+      <div class="mt-10 space-y-4">
+        <!-- FAQ 1 -->
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden bg-baemun-ice shadow-sm">
+          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-cinzel font-bold text-sm sm:text-base text-baemun-navy">
+              1. O acompanhamento biomédico substitui a consulta com o meu médico?
+            </span>
+            <span class="faq-icon text-baemun-teal font-bold text-xl transition-transform shrink-0">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4 bg-white">
+            <strong>Não.</strong> O acompanhamento biomédico na Baemun é estritamente <strong>complementar e pós-diagnóstico</strong>. O diagnóstico clínico e a prescrição de medicamentos são atos exclusivos do seu médico (endocrinologista, gastroenterologista ou reumatologista). Nosso papel é acompanhar a evolução dos seus exames laboratoriais, orientar hábitos de saúde e aplicar a Fitoterapia em total harmonia com o tratamento médico.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden bg-baemun-ice shadow-sm">
+          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-cinzel font-bold text-sm sm:text-base text-baemun-navy">
+              2. Por que existe relação entre Doença Celíaca e Tireoidite de Hashimoto?
+            </span>
+            <span class="faq-icon text-baemun-teal font-bold text-xl transition-transform shrink-0">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4 bg-white">
+            Condições autoimunes costumam compartilhar predisposições genéticas e mecanismos inflamatórios semelhantes. Por isso, pacientes com Doença Celíaca apresentam maior frequência de alterações autoimunes na tireoide (como Hashimoto) e vice-versa — algo que a própria Rachel vivencia na prática e acompanha de perto nos marcadores laboratoriais.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden bg-baemun-ice shadow-sm">
+          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-cinzel font-bold text-sm sm:text-base text-baemun-navy">
+              3. Por que não devo retirar o glúten por conta própria antes de investigar?
+            </span>
+            <span class="faq-icon text-baemun-teal font-bold text-xl transition-transform shrink-0">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4 bg-white">
+            Porque os anticorpos específicos da Doença Celíaca e a avaliação intestinal dependem da exposição ao glúten para aparecerem corretamente nos exames. Cortar o glúten antes da avaliação médica pode gerar um resultado falso-negativo e atrasar toda a sua investigação.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden bg-baemun-ice shadow-sm">
+          <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-cinzel font-bold text-sm sm:text-base text-baemun-navy">
+              4. Rigidez nas mãos ao acordar merece atenção?
+            </span>
+            <span class="faq-icon text-baemun-teal font-bold text-xl transition-transform shrink-0">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4 bg-white">
+            Sim. Quando a rigidez matinal nas articulações das mãos dura <strong>mais de 30 minutos</strong>, é um sinal clássico que merece avaliação médica reumatológica e monitoramento cuidadoso de provas inflamatórias laboratoriais.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. RODAPÉ INSTITUCIONAL EM FUNDO BRANCO & NOTA DE CONFORMIDADE CRBM-6 -->
+  <footer class="bg-white text-slate-600 pt-14 pb-10 border-t-4 border-baemun-teal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-200">
+        <!-- Coluna 1: Marca com Logo Oficial Baemun -->
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center gap-3.5">
+            <div class="w-11 h-11 rounded-xl bg-white border border-baemun-teal/30 flex items-center justify-center p-1.5 overflow-hidden shadow-sm">
+              <img src="logo.png" class="w-full h-full object-contain" alt="Logo Baemun" />
+            </div>
+            <div>
+              <span class="font-cinzel text-2xl font-bold text-baemun-navy tracking-[0.18em] block">BAEMUN</span>
+              <span class="text-[10px] uppercase tracking-[0.22em] text-baemun-teal font-semibold block -mt-1">Saúde & Autoimunes</span>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 max-w-sm leading-relaxed">
+            Acompanhamento biomédico complementar pós-diagnóstico em doenças autoimunes. Patologia Clínica, Fitoterapia e promoção da saúde.
+          </p>
+          <p class="text-xs font-bold text-baemun-teal tracking-wider uppercase pt-1">
+            Rachel Valente Gomes · Biomédica · CRBM/PR 9916
+          </p>
+        </div>
+
+        <!-- Coluna 2: Navegação Rápida -->
+        <div class="md:col-span-3 space-y-2 text-xs sm:text-sm">
+          <h4 class="font-cinzel font-bold text-baemun-navy uppercase tracking-wider mb-3">Navegação</h4>
+          <ul class="space-y-2 text-slate-600 font-medium">
+            <li><a href="#identificacao" class="hover:text-baemun-teal transition-colors">Você se identifica?</a></li>
+            <li><a href="#condicoes" class="hover:text-baemun-teal transition-colors">As 5 Condições</a></li>
+            <li><a href="#avaliacao" class="hover:text-baemun-teal transition-colors">Avaliação em 4 Etapas</a></li>
+            <li><a href="#sobre" class="hover:text-baemun-teal transition-colors">Sobre a Rachel</a></li>
+            <li><a href="#agendamento" class="hover:text-baemun-teal transition-colors">Agendar Atendimento</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Canais Oficiais -->
+        <div class="md:col-span-4 space-y-2 text-xs sm:text-sm">
+          <h4 class="font-cinzel font-bold text-baemun-navy uppercase tracking-wider mb-3">Canais Oficiais</h4>
+          <p class="text-slate-600">Domínio Oficial: <strong class="text-baemun-navy">baemunsaude.com.br</strong></p>
+          <p class="text-slate-600">Instagram: <strong class="text-baemun-teal">@baemun.saude</strong></p>
+          <p class="text-slate-600">Modalidades: <strong class="text-baemun-navy">Online e Presencial (Paraná)</strong></p>
+        </div>
+      </div>
+
+      <!-- Nota de Transparência Ética (Parecer Técnico CRBM-6) em Box Claro -->
+      <div class="bg-baemun-tealSoft rounded-2xl p-5 border border-baemun-teal/20 text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+        <strong class="text-baemun-navy uppercase tracking-wider block mb-1">Nota de Transparência Ética e Conformidade Profissional (CRBM-6):</strong>
+        Os serviços prestados pela <strong>Baemun</strong> consistem em acompanhamento biomédico complementar pós-diagnóstico, fundamentado nas habilitações de Patologia Clínica (leitura evolutiva de exames laboratoriais) e Fitoterapia da Biomédica <strong>Rachel Valente Gomes (CRBM/PR 9916)</strong>, bem como em orientações de promoção da saúde e higiene do sono. Este atendimento atua de forma integrada e não substitui a consulta médica, o diagnóstico clínico de doenças ou prescrições nutricionais e de treinamento físico privativas de suas respectivas categorias.
+      </div>
+
+      <div class="text-center text-xs text-slate-400 pt-2">
+        © 2026 BAEMUN Saúde & Autoimunes (baemunsaude.com.br) · Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT INTERATIVO -->
+  <script>
+    // 1. Menu Mobile Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
+    });
+
+    // 2. Seção Interativa: "Quantas dessas frases você já ouviu?"
+    const phraseCards = document.querySelectorAll('.phrase-card');
+    const countBadge = document.getElementById('selected-count-badge');
+    const feedbackTitle = document.getElementById('feedback-title');
+    const feedbackText = document.getElementById('feedback-text');
+    const selectedPhrases = new Set();
+
+    phraseCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const id = card.getAttribute('data-phrase');
+        const checkCircle = card.querySelector('.phrase-check');
+        const tagText = card.querySelector('.phrase-tag');
+
+        if (selectedPhrases.has(id)) {
+          selectedPhrases.delete(id);
+          card.classList.remove('border-baemun-teal', 'bg-baemun-tealSoft');
+          card.classList.add('border-slate-200', 'bg-white');
+          checkCircle.classList.remove('bg-baemun-teal', 'border-baemun-teal', 'text-white');
+          checkCircle.classList.add('border-slate-300', 'text-transparent');
+          tagText.textContent = 'Toque se já ouviu';
+        } else {
+          selectedPhrases.add(id);
+          card.classList.remove('border-slate-200', 'bg-white');
+          card.classList.add('border-baemun-teal', 'bg-baemun-tealSoft');
+          checkCircle.classList.remove('border-slate-300', 'text-transparent');
+          checkCircle.classList.add('bg-baemun-teal', 'border-baemun-teal', 'text-white');
+          tagText.textContent = 'Selecionada';
+        }
+
+        const count = selectedPhrases.size;
+        if (count === 0) {
+          countBadge.textContent = 'Selecione acima as frases que já ouviu';
+          feedbackTitle.textContent = 'SEUS SINTOMAS SÃO REAIS E MERECEM UM OLHAR TÉCNICO INTEGRADO';
+          feedbackText.textContent = 'Na Baemun, você não recebe palpites prontos. Nós organizamos seus exames laboratoriais, avaliamos a evolução dos marcadores e estruturamos hábitos e fitoterapia para apoiar o seu dia a dia pós-diagnóstico.';
+        } else if (count <= 2) {
+          countBadge.textContent = `Você marcou ${count} ${count === 1 ? 'frase' : 'frases'} muito comuns no pós-diagnóstico`;
+          feedbackTitle.textContent = 'VOCÊ NÃO ESTÁ EXAGERANDO — CONVIVER COM UMA AUTOIMUNE EXIGE SUPORTE';
+          feedbackText.textContent = 'Mesmo quando os exames parecem estabilizados em uma folha isolada, a leitura evolutiva de marcadores e os ajustes de sono e rotina fazem toda a diferença na sua disposição diária.';
+        } else {
+          countBadge.textContent = `Você já ouviu ${count} das 6 frases!`;
+          feedbackTitle.textContent = 'CHEGA DE ATRAVESSAR O PÓS-DIAGNÓSTICO SEM ACOLHIMENTO TÉCNICO';
+          feedbackText.textContent = 'A Rachel também tem Doença Celíaca e Hashimoto e criou a Baemun justamente para que nenhuma paciente precise ouvir que seus sintomas são "só estresse". Vamos organizar seus exames e sua rotina juntas?';
+        }
+      });
+    });
+
+    // 3. Dados e Abas das 5 Condições Acompanhadas
+    const conditionsData = {
+      hashimoto: {
+        badge: '1 · Autoimune da Tireoide',
+        title: 'TIREOIDITE DE HASHIMOTO',
+        desc: 'É a causa mais comum de hipotireoidismo. Mesmo com a reposição hormonal prescrita pelo médico em dia, muitas mulheres continuam relatando fadiga intensa, queda de cabelo, pele ressecada e oscilações de humor.',
+        tip: 'Acompanhar apenas o TSH isolado nem sempre mostra o quadro completo. Na Baemun, organizamos a curva evolutiva dos seus anticorpos, vitaminas e minerais para apoiar o tratamento do seu médico.',
+        bullets: [
+          'Leitura evolutiva de TSH, T4 Livre, T3 Livre, Anti-TPO e Anti-Tireoglobulina.',
+          'Acompanhamento de ferritina, vitamina D, B12 e marcadores inflamatórios.',
+          'Orientação em higiene do sono, rotina energética e Fitoterapia complementar.'
+        ],
+        selectVal: 'Tireoidite de Hashimoto'
+      },
+      celiaca: {
+        badge: '2 · Autoimune Sistêmica',
+        title: 'DOENÇA CELÍACA',
+        desc: 'A Doença Celíaca não afeta só o intestino: ela é uma condição autoimune sistêmica que pode provocar anemia persistente, cansaço crônico, alterações de pele, aftas e deficiências de absorção.',
+        tip: 'Nunca retire o glúten por conta própria antes de concluir os exames com o seu médico gastroenterologista, pois isso pode alterar os marcadores e atrapalhar o diagnóstico.',
+        bullets: [
+          'Monitoramento laboratorial de anticorpos (Anti-transglutaminase, Anti-endomísio) e perfil do ferro.',
+          'Suporte prático de rotina para evitar contaminação cruzada no pós-diagnóstico.',
+          'Atenção integrada à tireoide (pela frequente associação entre Celíaca e Hashimoto).'
+        ],
+        selectVal: 'Doença Celíaca'
+      },
+      retocolite: {
+        badge: '3 · Inflamatória Intestinal',
+        title: 'RETOCOLITE ULCERATIVA',
+        desc: 'Condição inflamatória crônica que acomete a camada mucosa do intestino grosso (cólon e reto) de maneira contínua, exigindo vigilância constante entre os períodos de crise e remissão.',
+        tip: 'O acompanhamento evolutivo de exames laboratoriais e de fezes (como a calprotectina fecal) ajuda a visualizar tendências inflamatórias e encaminhar precocemente ao seu médico.',
+        bullets: [
+          'Leitura evolutiva de PCR, VHS, hemograma completo, ferro sérico e calprotectina.',
+          'Cuidado complementar com hidratação, descanso reparador e manejo do estresse.',
+          'Suporte fitoterápico seguro e alinhado às prescrições do seu gastroenterologista.'
+        ],
+        selectVal: 'Retocolite Ulcerativa'
+      },
+      crohn: {
+        badge: '4 · Inflamatória Intestinal',
+        title: 'DOENÇA DE CROHN',
+        desc: 'Diferente da Retocolite, a Doença de Crohn pode atingir qualquer trecho do sistema digestivo em camadas mais profundas, impactando diretamente a absorção de nutrientes e a energia diária.',
+        tip: 'Manter um histórico organizado dos seus exames de sangue e marcadores nutricionais é essencial para preservar sua qualidade de vida nas fases de remissão.',
+        bullets: [
+          'Monitoramento atento de vitaminas lipossolúveis, B12, zinco, ferro e albumina.',
+          'Organização de relatórios evolutivos claros para você levar às consultas médicas.',
+          'Estratégias de rotina e hábitos saudáveis para reduzir gatilhos de exaustão.'
+        ],
+        selectVal: 'Doença de Crohn'
+      },
+      artrite: {
+        badge: '5 · Autoimune Reumatológica',
+        title: 'ARTRITE REUMATOIDE',
+        desc: 'Condição autoimune caracterizada pela inflamação das articulações. Um dos sinais mais importantes é a rigidez nas mãos ao acordar que dura mais de 30 minutos.',
+        tip: 'O suporte biomédico complementar acompanha seus marcadores inflamatórios e apoia hábitos diários que favorecem o bem-estar articular junto ao tratamento do reumatologista.',
+        bullets: [
+          'Acompanhamento evolutivo de provas inflamatórias (PCR, VHS, Fator Reumatoide e Anti-CCP).',
+          'Orientação em Fitoterapia com foco no bem-estar e qualidade do sono.',
+          'Incentivo à promoção da saúde e mobilidade respeitando os limites do seu corpo.'
+        ],
+        selectVal: 'Artrite Reumatoide'
+      }
+    };
+
+    const condTabs = document.querySelectorAll('.cond-tab');
+    const condBadge = document.getElementById('cond-badge');
+    const condTitle = document.getElementById('cond-title');
+    const condDesc = document.getElementById('cond-desc');
+    const condTip = document.getElementById('cond-tip');
+    const condBullets = document.getElementById('cond-bullets');
+    const condSelectCta = document.getElementById('cond-select-cta');
+    const patientConditionSelect = document.getElementById('patient-condition');
+
+    condTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const key = tab.getAttribute('data-cond');
+        const data = conditionsData[key];
+
+        // Estilo ativo das abas (Verde-Petróleo ativo, Fundo Claro inativo)
+        condTabs.forEach(t => {
+          t.classList.remove('bg-baemun-teal', 'text-white', 'shadow-sm');
+          t.classList.add('bg-baemun-tealSoft', 'text-baemun-navy', 'border', 'border-slate-200');
+        });
+        tab.classList.remove('bg-baemun-tealSoft', 'text-baemun-navy', 'border', 'border-slate-200');
+        tab.classList.add('bg-baemun-teal', 'text-white', 'shadow-sm');
+
+        // Atualiza conteúdo do card
+        condBadge.textContent = data.badge;
+        condTitle.textContent = data.title;
+        condDesc.textContent = data.desc;
+        condTip.textContent = data.tip;
+        condBullets.innerHTML = data.bullets.map(b => `
+          <li class="flex items-start gap-2.5">
+            <span class="text-baemun-teal font-bold">●</span>
+            <span>${b}</span>
+          </li>
+        `).join('');
+        condSelectCta.textContent = `Agendar Acompanhamento para ${data.selectVal} →`;
+        condSelectCta.setAttribute('data-select-cond', data.selectVal);
+      });
+    });
+
+    condSelectCta.addEventListener('click', () => {
+      const targetCond = condSelectCta.getAttribute('data-select-cond');
+      patientConditionSelect.value = targetCond;
+      updateWhatsAppPreview();
+      document.getElementById('agendamento').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // 4. Checklist de Preparação ("O que levar")
+    const prepChecks = document.querySelectorAll('.prep-check');
+    const checklistProgress = document.getElementById('checklist-progress');
+
+    prepChecks.forEach(chk => {
+      chk.addEventListener('change', () => {
+        const checkedCount = Array.from(prepChecks).filter(c => c.checked).length;
+        if (checkedCount === 4) {
+          checklistProgress.textContent = '✓ Tudo pronto para sua avaliação (4/4)';
+          checklistProgress.classList.replace('bg-baemun-tealLight', 'bg-baemun-teal');
+          checklistProgress.classList.replace('text-baemun-teal', 'text-white');
+        } else {
+          checklistProgress.textContent = `${checkedCount} de 4 itens marcados`;
+          checklistProgress.classList.replace('bg-baemun-teal', 'bg-baemun-tealLight');
+          checklistProgress.classList.replace('text-white', 'text-baemun-teal');
+        }
+      });
+    });
+
+    // 5. Gerador de Mensagem de WhatsApp Personalizada
+    const nameInput = document.getElementById('patient-name');
+    const modalitySelect = document.getElementById('patient-modality');
+    const goalSelect = document.getElementById('patient-goal');
+    const previewBox = document.getElementById('whatsapp-preview');
+    const whatsappLink = document.getElementById('whatsapp-send-link');
+    const copyBtn = document.getElementById('copy-msg-btn');
+    const copyFeedback = document.getElementById('copy-feedback');
+
+    function updateWhatsAppPreview() {
+      const name = nameInput.value.trim();
+      const cond = patientConditionSelect.value;
+      const mod = modalitySelect.value;
+      const goal = goalSelect.value;
+
+      const greeting = name ? `Olá, Rachel! Meu nome é ${name}.` : `Olá, Rachel! Tudo bem?`;
+      const fullMessage = `${greeting} Vim pelo site da Baemun (baemunsaude.com.br). Convivo com *${cond}* e gostaria de informações sobre o Acompanhamento Biomédico Complementar no formato *${mod}* para ${goal}.`;
+
+      previewBox.textContent = `"${fullMessage}"`;
+      const encoded = encodeURIComponent(fullMessage);
+      whatsappLink.href = `https://wa.me/5541999999999?text=${encoded}`;
+      return fullMessage;
+    }
+
+    [nameInput, patientConditionSelect, modalitySelect, goalSelect].forEach(el => {
+      el.addEventListener('input', updateWhatsAppPreview);
+      el.addEventListener('change', updateWhatsAppPreview);
+    });
+
+    copyBtn.addEventListener('click', () => {
+      const msg = updateWhatsAppPreview();
+      const tempTextarea = document.createElement('textarea');
+      tempTextarea.value = msg;
+      document.body.appendChild(tempTextarea);
+      tempTextarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempTextarea);
+
+      copyFeedback.classList.remove('hidden');
+      setTimeout(() => {
+        copyFeedback.classList.add('hidden');
+      }, 3000);
+    });
+
+    // Inicializa prévia do WhatsApp
+    updateWhatsAppPreview();
+
+    // 6. Accordion de Dúvidas Frequentes (FAQ)
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const isOpen = !content.classList.contains('hidden');
+
+        if (isOpen) {
+          content.classList.add('hidden');
+          icon.textContent = '+';
+        } else {
+          content.classList.remove('hidden');
+          icon.textContent = '−';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
