@@ -63,14 +63,14 @@
     .dna-card-watermark::after {
       content: "";
       position: absolute;
-      bottom: -28px;
-      right: -28px;
-      width: 175px;
-      height: 175px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120' fill='none'%3E%3Cg opacity='0.12' stroke='%231E6B68' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M20 10 C 60 10, 60 60, 100 60 C 60 60, 60 110, 20 110'/%3E%3Cpath d='M100 10 C 60 10, 60 60, 20 60 C 60 60, 60 110, 100 110'/%3E%3Cline x1='35' y1='22' x2='85' y2='22' stroke-dasharray='2 3'/%3E%3Cline x1='28' y1='35' x2='92' y2='35'/%3E%3Cline x1='45' y1='48' x2='75' y2='48'/%3E%3Cline x1='45' y1='72' x2='75' y2='72'/%3E%3Cline x1='28' y1='85' x2='92' y2='85'/%3E%3Cline x1='35' y1='98' x2='85' y2='98' stroke-dasharray='2 3'/%3E%3C/g%3E%3C/svg%3E");
+      bottom: -24px;
+      right: -20px;
+      width: 170px;
+      height: 204px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 240' fill='none'%3E%3Cg opacity='0.08'%3E%3Cg stroke='%231E6B68' stroke-width='4' stroke-linecap='round'%3E%3Cline x1='86' y1='56' x2='113' y2='61'/%3E%3Cline x1='78' y1='72' x2='113' y2='78'/%3E%3Cline x1='84' y1='87' x2='102' y2='90'/%3E%3Cline x1='88' y1='121' x2='112' y2='121'/%3E%3Cline x1='78' y1='137' x2='122' y2='137'/%3E%3Cline x1='88' y1='153' x2='112' y2='153'/%3E%3Cline x1='88' y1='184' x2='112' y2='184'/%3E%3Cline x1='78' y1='200' x2='122' y2='200'/%3E%3Cline x1='86' y1='216' x2='114' y2='216'/%3E%3C/g%3E%3Cg stroke='%23142B47' stroke-width='6' stroke-linecap='round'%3E%3Cpath d='M122 36 C 134 52, 132 80, 111 96'/%3E%3Cpath d='M87 112 C 60 128, 60 146, 87 162'/%3E%3Cpath d='M111 178 C 136 194, 136 214, 112 228'/%3E%3C/g%3E%3Cpath d='M118 20 C 82 34, 62 54, 64 76 C 66 98, 136 113, 136 137 C 136 161, 64 176, 64 200 C 64 215, 76 224, 88 228' stroke='%231E6B68' stroke-width='8' stroke-linecap='round'/%3E%3Ccircle cx='118' cy='20' r='8' fill='%231E6B68'/%3E%3C/g%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-size: contain;
-      transform: rotate(-28deg);
+      transform: rotate(-22deg);
       pointer-events: none;
       z-index: 0;
     }
@@ -177,17 +177,30 @@
 
   <!-- 1. HERO SECTION (Fundo Branco Predominante + Hélice de DNA Diagonal em Verde-Petróleo Suave) -->
   <section id="inicio" class="relative bg-white text-baemun-navy py-16 sm:py-24 lg:py-28 overflow-hidden border-b border-slate-200">
-    <!-- Hélice de DNA no canto inferior direito na diagonal (igual às capas brancas do Canva) -->
-    <div class="absolute right-[-70px] bottom-[-60px] opacity-[0.11] pointer-events-none select-none transform -rotate-12">
-      <svg class="w-[420px] h-[420px] sm:w-[560px] sm:h-[560px]" viewBox="0 0 200 200" fill="none">
-        <path d="M30 10 C 100 10, 100 100, 170 100 C 100 100, 100 190, 30 190" stroke="#1E6B68" stroke-width="3.2"/>
-        <path d="M170 10 C 100 10, 100 100, 30 100 C 100 100, 100 190, 170 190" stroke="#142B47" stroke-width="3.2"/>
-        <line x1="50" y1="30" x2="150" y2="30" stroke="#1E6B68" stroke-width="2" stroke-dasharray="4 4"/>
-        <line x1="45" y1="55" x2="155" y2="55" stroke="#1E6B68" stroke-width="2"/>
-        <line x1="70" y1="80" x2="130" y2="80" stroke="#1E6B68" stroke-width="2"/>
-        <line x1="70" y1="120" x2="130" y2="120" stroke="#1E6B68" stroke-width="2"/>
-        <line x1="45" y1="145" x2="155" y2="145" stroke="#1E6B68" stroke-width="2"/>
-        <line x1="50" y1="170" x2="150" y2="170" stroke="#1E6B68" stroke-width="2" stroke-dasharray="4 4"/>
+    <!-- Hélice de DNA Orgânica no canto inferior direito (fiel ao desenho da logo oficial Baemun) -->
+    <div class="absolute right-[-40px] bottom-[-50px] opacity-[0.08] pointer-events-none select-none transform -rotate-12">
+      <svg class="w-[380px] h-[456px] sm:w-[480px] sm:h-[576px]" viewBox="0 0 200 240" fill="none">
+        <!-- Ligações internas (pares de bases) -->
+        <g stroke="#1E6B68" stroke-width="4" stroke-linecap="round">
+          <line x1="86" y1="56" x2="113" y2="61"/>
+          <line x1="78" y1="72" x2="113" y2="78"/>
+          <line x1="84" y1="87" x2="102" y2="90"/>
+          <line x1="88" y1="121" x2="112" y2="121"/>
+          <line x1="78" y1="137" x2="122" y2="137"/>
+          <line x1="88" y1="153" x2="112" y2="153"/>
+          <line x1="88" y1="184" x2="112" y2="184"/>
+          <line x1="78" y1="200" x2="122" y2="200"/>
+          <line x1="86" y1="216" x2="114" y2="216"/>
+        </g>
+        <!-- Fita secundária em Azul-Marinho (passando por trás com respiro 3D) -->
+        <g stroke="#142B47" stroke-width="6" stroke-linecap="round">
+          <path d="M122 36 C 134 52, 132 80, 111 96"/>
+          <path d="M87 112 C 60 128, 60 146, 87 162"/>
+          <path d="M111 178 C 136 194, 136 214, 112 228"/>
+        </g>
+        <!-- Fita principal contínua em Verde-Petróleo + esfera superior da identidade -->
+        <path d="M118 20 C 82 34, 62 54, 64 76 C 66 98, 136 113, 136 137 C 136 161, 64 176, 64 200 C 64 215, 76 224, 88 228" stroke="#1E6B68" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="118" cy="20" r="8" fill="#1E6B68"/>
       </svg>
     </div>
 
