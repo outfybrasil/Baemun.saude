@@ -1,0 +1,116 @@
+/* BAEMUN — Estilos Compartilhados (Identidade Visual Oficial) */
+
+:root {
+  --baemun-navy: #142B47;
+  --baemun-navy-dark: #0D1D31;
+  --baemun-teal: #1E6B68;
+  --baemun-teal-dark: #16524F;
+  --baemun-teal-light: #E2F0EF;
+  --baemun-soft: #F2F6F6;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #1F2937;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.05em;
+}
+
+/* Gradientes sutis e sofisticados da marca */
+.baemun-hero-gradient {
+  background: linear-gradient(135deg, #142B47 0%, #163954 58%, #1E6B68 100%);
+}
+
+.baemun-band-gradient {
+  background: linear-gradient(135deg, #142B47 0%, #194A5A 55%, #1E6B68 100%);
+}
+
+/* Marca d'água sutil da hélice de DNA em cards claros */
+.dna-watermark {
+  position: relative;
+  overflow: hidden;
+}
+
+.dna-watermark::after {
+  content: "";
+  position: absolute;
+  bottom: -26px;
+  right: -20px;
+  width: 155px;
+  height: 186px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 240' fill='none'%3E%3Cg opacity='0.07'%3E%3Cg stroke='%231E6B68' stroke-width='4' stroke-linecap='round'%3E%3Cline x1='86' y1='56' x2='113' y2='61'/%3E%3Cline x1='78' y1='72' x2='113' y2='78'/%3E%3Cline x1='84' y1='87' x2='102' y2='90'/%3E%3Cline x1='88' y1='121' x2='112' y2='121'/%3E%3Cline x1='78' y1='137' x2='122' y2='137'/%3E%3Cline x1='88' y1='153' x2='112' y2='153'/%3E%3Cline x1='88' y1='184' x2='112' y2='184'/%3E%3Cline x1='78' y1='200' x2='122' y2='200'/%3E%3Cline x1='86' y1='216' x2='114' y2='216'/%3E%3C/g%3E%3Cg stroke='%23142B47' stroke-width='6' stroke-linecap='round'%3E%3Cpath d='M122 36 C 134 52, 132 80, 111 96'/%3E%3Cpath d='M87 112 C 60 128, 60 146, 87 162'/%3E%3Cpath d='M111 178 C 136 194, 136 214, 112 228'/%3E%3C/g%3E%3Cpath d='M118 20 C 82 34, 62 54, 64 76 C 66 98, 136 113, 136 137 C 136 161, 64 176, 64 200 C 64 215, 76 224, 88 228' stroke='%231E6B68' stroke-width='8' stroke-linecap='round'/%3E%3Ccircle cx='118' cy='20' r='8' fill='%231E6B68'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(-20deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dna-watermark-dark {
+  position: relative;
+  overflow: hidden;
+}
+
+.dna-watermark-dark::after {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  right: -20px;
+  width: 175px;
+  height: 210px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 240' fill='none'%3E%3Cg opacity='0.11'%3E%3Cg stroke='%239FE0DC' stroke-width='4' stroke-linecap='round'%3E%3Cline x1='86' y1='56' x2='113' y2='61'/%3E%3Cline x1='78' y1='72' x2='113' y2='78'/%3E%3Cline x1='84' y1='87' x2='102' y2='90'/%3E%3Cline x1='88' y1='121' x2='112' y2='121'/%3E%3Cline x1='78' y1='137' x2='122' y2='137'/%3E%3Cline x1='88' y1='153' x2='112' y2='153'/%3E%3Cline x1='88' y1='184' x2='112' y2='184'/%3E%3Cline x1='78' y1='200' x2='122' y2='200'/%3E%3Cline x1='86' y1='216' x2='114' y2='216'/%3E%3C/g%3E%3Cg stroke='%23FFFFFF' stroke-width='6' stroke-linecap='round'%3E%3Cpath d='M122 36 C 134 52, 132 80, 111 96'/%3E%3Cpath d='M87 112 C 60 128, 60 146, 87 162'/%3E%3Cpath d='M111 178 C 136 194, 136 214, 112 228'/%3E%3C/g%3E%3Cpath d='M118 20 C 82 34, 62 54, 64 76 C 66 98, 136 113, 136 137 C 136 161, 64 176, 64 200 C 64 215, 76 224, 88 228' stroke='%239FE0DC' stroke-width='8' stroke-linecap='round'/%3E%3Ccircle cx='118' cy='20' r='8' fill='%239FE0DC'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(-20deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dna-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tipografia editorial para leitura confortável de artigos e páginas de condições */
+.editorial-prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.85;
+  color: #334155;
+}
+
+.editorial-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.editorial-prose strong {
+  color: #142B47;
+  font-weight: 600;
+}
+
+/* Scrollbar sutil */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2F6F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E6B68;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .dna-watermark::after,
+  .dna-watermark-dark::after {
+    width: 120px;
+    height: 144px;
+    opacity: 0.7;
+  }
+}

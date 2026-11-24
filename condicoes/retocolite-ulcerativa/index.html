@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth scroll-pt-20">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retocolite Ulcerativa | Acompanhamento Biomédico Complementar — BAEMUN</title>
+  <meta name="description" content="Conheça a Retocolite Ulcerativa, seus sinais de atenção e como o acompanhamento biomédico complementar da BAEMUN apoia a leitura evolutiva de exames e qualidade de vida. Online e presencial em Curitiba/PR." />
+  <link rel="icon" type="image/png" href="../../favicon.png" />
+  <link rel="apple-touch-icon" href="../../favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            baemun: { navy: '#142B47', navyDark: '#0D1D31', teal: '#1E6B68', tealDark: '#16524F', tealLight: '#E2F0EF', soft: '#F2F6F6' }
+          },
+          fontFamily: { cinzel: ['Cinzel', 'serif'], montserrat: ['Montserrat', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body class="antialiased bg-white text-slate-800 selection:bg-baemun-teal selection:text-white">
+
+  <div class="bg-baemun-navyDark text-slate-200 text-xs py-2 px-4 border-b border-baemun-teal/40">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+      <span class="tracking-wider uppercase font-semibold text-white">Doenças Autoimunes e Inflamatórias</span>
+      <span class="text-slate-300 font-medium">Rachel Valente Gomes · Biomédica · <strong class="text-teal-300 font-semibold">CRBM-6 nº 9916</strong></span>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <a href="../../" aria-label="BAEMUN - Voltar para o início" class="flex items-center gap-3 group focus:outline-none shrink-0">
+        <div class="w-12 h-12 rounded-xl bg-white border border-baemun-teal/30 flex items-center justify-center shadow-sm group-hover:border-baemun-teal transition-colors overflow-hidden p-1.5">
+          <img src="../../logo.png" class="w-full h-full object-contain" alt="Logo BAEMUN" />
+        </div>
+        <div>
+          <span class="block font-cinzel text-xl sm:text-2xl font-bold text-baemun-navy tracking-[0.18em]">BAEMUN</span>
+          <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.16em] text-baemun-teal font-semibold -mt-0.5">Autoimunes &amp; Inflamatórias</span>
+        </div>
+      </a>
+      <nav aria-label="Menu principal" class="hidden lg:flex items-center gap-7 text-sm font-semibold text-baemun-navy">
+        <a href="../../#a-baemun" class="hover:text-baemun-teal transition-colors">A BAEMUN</a>
+        <a href="../../#condicoes" class="text-baemun-teal">Condições</a>
+        <a href="../../#atendimento" class="hover:text-baemun-teal transition-colors">Atendimento</a>
+        <a href="../../#conteudos" class="hover:text-baemun-teal transition-colors">Conteúdos</a>
+        <a href="../../#duvidas" class="hover:text-baemun-teal transition-colors">Dúvidas</a>
+      </nav>
+      <div class="hidden sm:flex items-center">
+        <a href="#" data-whatsapp class="bg-baemun-teal hover:bg-baemun-navy text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition-colors">Agendar atendimento</a>
+      </div>
+      <button id="mobile-menu-btn" type="button" aria-label="Abrir menu" class="lg:hidden bg-baemun-soft text-baemun-navy border border-baemun-teal/25 p-2.5 rounded-xl">
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-baemun-navy text-white border-t border-baemun-teal/40 px-4 pt-3 pb-6 space-y-1 shadow-xl">
+      <a href="../../#a-baemun" class="mobile-nav-link block py-3 text-slate-100 font-medium border-b border-white/10">A BAEMUN</a>
+      <a href="../../#condicoes" class="mobile-nav-link block py-3 text-teal-300 font-semibold border-b border-white/10">Condições</a>
+      <a href="../../#atendimento" class="mobile-nav-link block py-3 text-slate-100 font-medium border-b border-white/10">Atendimento</a>
+      <a href="../../#conteudos" class="mobile-nav-link block py-3 text-slate-100 font-medium border-b border-white/10">Conteúdos</a>
+      <a href="../../#duvidas" class="mobile-nav-link block py-3 text-slate-100 font-medium border-b border-white/10">Dúvidas</a>
+      <a href="#" data-whatsapp class="mobile-nav-link block w-full text-center bg-baemun-teal text-white font-semibold py-3.5 rounded-xl mt-4">Agendar atendimento</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="baemun-hero-gradient text-white py-14 sm:py-20 border-b-4 border-baemun-teal">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+        <a href="../../#condicoes" class="inline-flex items-center gap-2 text-xs font-semibold text-teal-200 hover:text-white transition-colors">
+          <span>← Voltar para Condições</span>
+        </a>
+        <div class="block">
+          <span class="inline-block px-3 py-1 rounded-full bg-white/10 border border-teal-300/35 text-teal-200 text-xs font-bold uppercase tracking-wider">Doença Inflamatória Intestinal</span>
+        </div>
+        <h1 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">Retocolite Ulcerativa</h1>
+        <p class="text-slate-100 text-base sm:text-lg leading-relaxed max-w-3xl">
+          Inflamação crônica da mucosa do intestino grosso (cólon e reto), que alterna fases de atividade e remissão e exige acompanhamento próximo.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 sm:py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="editorial-prose text-sm sm:text-base">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-baemun-navy mb-4">O que é a Retocolite Ulcerativa?</h2>
+          <p>
+            A retocolite ulcerativa é uma doença inflamatória intestinal crônica que acomete a camada mucosa do intestino grosso, iniciando-se no reto e podendo se estender continuamente pelo cólon.
+          </p>
+          <p>
+            Por se manifestar em ciclos de remissão e agudização, o monitoramento contínuo de exames laboratoriais e o cuidado com a rotina são aliados importantes para apoiar o tratamento médico e a qualidade de vida.
+          </p>
+        </div>
+
+        <div class="bg-baemun-soft rounded-2xl p-6 sm:p-8 border border-slate-200 border-t-4 border-t-baemun-teal">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-baemun-navy mb-4">Principais manifestações e sinais de atenção</h2>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700">
+            <li class="flex items-start gap-2.5 bg-white p-3.5 rounded-xl border border-slate-200/80"><span class="text-baemun-teal font-bold">●</span><span>Diarreia frequente, frequentemente acompanhada de muco ou sangue nas fezes.</span></li>
+            <li class="flex items-start gap-2.5 bg-white p-3.5 rounded-xl border border-slate-200/80"><span class="text-baemun-teal font-bold">●</span><span>Urgência evacuatória, cólicas e desconforto abdominal.</span></li>
+            <li class="flex items-start gap-2.5 bg-white p-3.5 rounded-xl border border-slate-200/80"><span class="text-baemun-teal font-bold">●</span><span>Fadiga persistente, queda nos estoques de ferro e anemia.</span></li>
+            <li class="flex items-start gap-2.5 bg-white p-3.5 rounded-xl border border-slate-200/80"><span class="text-baemun-teal font-bold">●</span><span>Variação entre a percepção dos sintomas e a atividade inflamatória real nos exames.</span></li>
+          </ul>
+        </div>
+
+        <div class="space-y-5">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-baemun-navy">O papel do acompanhamento laboratorial e educativo na BAEMUN</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-baemun-teal">01 · Exames</span>
+              <h3 class="font-cinzel font-bold text-baemun-navy text-base">Marcadores Evolutivos</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Leitura evolutiva de calprotectina fecal, PCR, VHS, hemograma e perfil do ferro para observar tendências inflamatórias.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-baemun-teal">02 · Rotina</span>
+              <h3 class="font-cinzel font-bold text-baemun-navy text-base">Educação e Hábitos</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Orientações complementares voltadas a descanso reparador, hidratação, gestão de estresse e rotina sustentável.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-baemun-teal">03 · Integração</span>
+              <h3 class="font-cinzel font-bold text-baemun-navy text-base">Apoio ao Gastroenterologista</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Organização do histórico laboratorial e encaminhamento precoce ao médico sempre que houver sinais de alerta.</p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 bg-baemun-soft p-4 rounded-xl border-l-4 border-l-baemun-navy">
+            <strong>Leitura complementar:</strong> <a href="../../conteudos/doenca-de-crohn-e-retocolite-ulcerativa-diferencas/" class="text-baemun-teal font-semibold hover:underline">Doença de Crohn e retocolite ulcerativa: quais são as diferenças? →</a>
+          </p>
+        </div>
+
+        <div class="bg-baemun-soft rounded-2xl p-6 border border-baemun-teal/25 text-xs sm:text-sm text-slate-700 leading-relaxed">
+          <strong class="text-baemun-navy uppercase tracking-wider block mb-1">Aviso Ético (CRBM-6):</strong>
+          O acompanhamento biomédico na BAEMUN é <strong>complementar e educativo</strong> e não substitui avaliação médica, diagnóstico clínico ou o tratamento prescrito pelo seu gastroenterologista.
+        </div>
+
+        <div class="baemun-band-gradient text-white rounded-2xl p-8 text-center space-y-5 shadow-lg">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold">Deseja conversar sobre o acompanhamento para Retocolite Ulcerativa?</h2>
+          <p class="text-slate-100 text-sm max-w-xl mx-auto">Atendimento online e presencial em Curitiba/PR, mediante agendamento.</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-1">
+            <a href="#" data-whatsapp class="w-full sm:w-auto bg-white hover:bg-baemun-tealLight text-baemun-navy font-bold text-sm px-7 py-3.5 rounded-xl shadow-md transition-colors">
+              Conversar sobre o atendimento pelo WhatsApp
+            </a>
+            <a href="../../#condicoes" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3.5 rounded-xl border border-white/30 transition-colors">
+              ← Voltar para a página inicial
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-baemun-navy text-slate-200 pt-12 pb-8 border-t-4 border-baemun-teal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-white/15">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-white p-1.5 shrink-0"><img src="../../logo.png" class="w-full h-full object-contain" alt="Logo BAEMUN" /></div>
+          <div>
+            <span class="font-cinzel text-xl font-bold text-white tracking-[0.18em] block">BAEMUN</span>
+            <span class="text-xs text-teal-300 font-semibold">Rachel Valente Gomes · Biomédica · CRBM-6 nº 9916</span>
+          </div>
+        </div>
+        <div class="text-xs sm:text-sm text-slate-300 space-y-1 md:text-right">
+          <p>Atendimento online e presencial em Curitiba/PR, mediante agendamento.</p>
+          <p>Instagram: <a href="https://instagram.com/baemun.saude" target="_blank" rel="noopener noreferrer" class="text-teal-300 hover:underline font-semibold">@baemun.saude</a></p>
+        </div>
+      </div>
+      <p class="text-[11px] text-slate-400 text-center">O acompanhamento biomédico da BAEMUN é complementar e não substitui consultas ou condutas médicas. · © 2026 BAEMUN.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/site-data.js"></script>
+</body>
+</html>
